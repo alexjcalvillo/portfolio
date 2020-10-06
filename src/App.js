@@ -12,16 +12,18 @@ import Work from './views/Work/Work';
 function App(props) {
   console.log(props);
   return (
-    <Router>
-      <Nav />
-      <div>
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/work" component={Work} />
-          <Route path="/about" component={About} />
-        </Switch>
-      </div>
-    </Router>
+    <div>
+      <Router>
+        <Nav />
+        <div className="container mx-auto">
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/work" component={Work} />
+            <Route path="/about" component={About} />
+          </Switch>
+        </div>
+      </Router>
+    </div>
   );
 }
 

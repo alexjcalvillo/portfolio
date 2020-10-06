@@ -23,13 +23,16 @@ const Nav = (props) => {
     text: 'About',
   };
 
-  if (props.store.pages === 'About') {
+  if (props.store.pages === 'about') {
     linkData.path = '/work';
     linkData.text = 'Work';
+  } else if (props.store.pages === 'work') {
+    linkData.path = '/about';
+    linkData.text = 'About';
   }
 
   return (
-    <header className={styles.container}>
+    <header className="container mx-auto">
       <nav className={styles.nav}>
         <h1 className={styles.me}>Alex Calvillo</h1>
         {page === 'home' ? (
