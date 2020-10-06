@@ -23,31 +23,31 @@ const Nav = (props) => {
     text: 'About',
   };
 
-  if (page === 'about') {
+  if (props.store.pages === 'About') {
     linkData.path = '/work';
     linkData.text = 'Work';
   }
 
   return (
-    <header>
+    <header className={styles.container}>
       <nav className={styles.nav}>
-        <h1 style={{ fontWeight: '300', fontSize: '2.2em' }}>Alex Calvillo</h1>
+        <h1 className={styles.me}>Alex Calvillo</h1>
         {page === 'home' ? (
           <>
             <Link to="/work" onClick={() => clickWork('work')}>
-              Work
+              <p>Work</p>
             </Link>
             <Link to="/about" onClick={() => clickWork('about')}>
-              About
+              <p>About</p>
             </Link>{' '}
           </>
         ) : (
           <>
             <Link to="/" onClick={() => clickWork('home')}>
-              Home
+              <p>Home</p>
             </Link>
             <Link to={linkData.path} onClick={() => clickWork(linkData.text)}>
-              {linkData.text}
+              <p>{linkData.text}</p>
             </Link>
           </>
         )}

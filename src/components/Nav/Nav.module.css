@@ -1,3 +1,8 @@
+.container {
+  margin: auto;
+  width: 95%;
+}
+
 .nav > * {
   display: inline-block;
 }
@@ -6,13 +11,37 @@
   color: black;
   text-decoration: none;
   font-size: 2.2em;
-  font-weight: 300;
+  font-weight: 100;
   cursor: pointer;
-  margin-top: 30px;
   margin-right: 12px;
   float: right;
 }
 
 .nav a:hover {
   color: gray;
+}
+
+.me {
+  font-size: 2.2em;
+  font-weight: 100;
+}
+
+@media all and (min-width: 375px) {
+  .nav a {
+    font-size: 1em;
+    display: inline-block;
+  }
+  .me {
+    font-size: 1em;
+    display: inline-block;
+  }
+}
+
+@media all and (min-width: 600px) {
+  .nav a {
+    font-size: 2.2em;
+  }
+  .me {
+    font-size: 2.2em;
+  }
 }
