@@ -3,57 +3,25 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import mapStoreToProps from '../../redux/mapStoreToProps';
 
-import styles from './Nav.module.css';
-
 const Nav = (props) => {
-  console.log(props);
-  const [page, setPage] = useState('');
-
-  const clickWork = (route) => {
-    const routeSent = route.toUpperCase();
-    props.dispatch({
-      type: `SET_${routeSent}`,
-      payload: route,
-    });
-    setPage(route);
-  };
-
-  let linkData = {
-    path: '/about',
-    text: 'About',
-  };
-
-  if (props.store.pages === 'about') {
-    linkData.path = '/work';
-    linkData.text = 'Work';
-  } else if (props.store.pages === 'work') {
-    linkData.path = '/about';
-    linkData.text = 'About';
-  }
-
   return (
-    <header className="container mx-auto">
-      <nav className={styles.nav}>
-        <h1 className={styles.me}>Alex Calvillo</h1>
-        {page === 'home' ? (
-          <>
-            <Link to="/work" onClick={() => clickWork('work')}>
-              <p>Work</p>
-            </Link>
-            <Link to="/about" onClick={() => clickWork('about')}>
-              <p>About</p>
-            </Link>{' '}
-          </>
-        ) : (
-          <>
-            <Link to="/" onClick={() => clickWork('home')}>
-              <p>Home</p>
-            </Link>
-            <Link to={linkData.path} onClick={() => clickWork(linkData.text)}>
-              <p>{linkData.text}</p>
-            </Link>
-          </>
-        )}
+    <header className="container mx-auto px-4 py-4">
+      <nav className="text-3xl font-thin flex justify-between pt-1">
+        <span className="absolute h-12 w-12 -ml-1 border border-black px-1 transition duration-500 ease-in-out all hover: transform hover:rotate-90"></span>
+        <Link to="/">
+          <span className="transition-none ml-px">AC</span>
+        </Link>
+        <div>
+          <Link to="/" className="mr-3 hover:underline">
+            Home
+          </Link>
+          <Link to="/work" className="mr-3 hover:underline">
+            Work
+          </Link>
+          <Link to="/about" className="hover:underline">
+            About
+          </Link>
+        </div>
       </nav>
     </header>
   );
