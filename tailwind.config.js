@@ -155,6 +155,7 @@ module.exports = {
       64: '16rem',
     },
     backgroundColor: (theme) => ({
+      ...theme('colors'),
       primary: '#e1dfd7',
       grade: '#e9e6dd',
     }),

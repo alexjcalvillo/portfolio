@@ -1,4 +1,5 @@
 import React from 'react';
+import Contact from '../../components/Contact/Contact';
 
 function About() {
   return (
@@ -18,7 +19,7 @@ function About() {
       </div>
       <br />
       <h3 className="text-xl pb-4">About:</h3>
-      <p className="py-4">
+      <p className="py-4 leading-loose font-light">
         I'm currently open to work immediately! My passion is in all things
         creative. Development has given me the ability to approach logic-based
         creativity I find extremely satisfying. You can see my professional
@@ -32,12 +33,14 @@ function About() {
         .
       </p>
       <br />
-      <p className="py-4">
+      <p className="py-4 font-light leading-loose">
         Outside of development I am an avid runner, shoot and edit videos, and
         play video and board games alike. I can ALWAYS eat more food and will
         try just about anything. I'm also open to freelancing just about
         anything creative and if you want to work together just reach out!
       </p>
+      <br />
+      <Contact />
     </div>
   );
 }
