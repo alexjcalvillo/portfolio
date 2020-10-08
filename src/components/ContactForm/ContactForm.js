@@ -15,6 +15,10 @@ const Contact = (props) => {
       [key]: event.target.value,
     });
   };
+
+  const submitEmail = () => {
+    props.dispatch({ type: 'SEND_EMAIL', payload: email });
+  };
   console.log(email);
   return (
     <div className="text-center mb-10">
@@ -76,7 +80,10 @@ const Contact = (props) => {
             onChange={handleInput('message')}
           />
         </div>
-        <button className="bg-gray-600 border border-gray-600 w-full rounded py-2 px-4 hover:bg-gray-500">
+        <button
+          className="bg-gray-600 border border-gray-600 w-full rounded py-2 px-4 hover:bg-gray-500"
+          onClick={submitEmail}
+        >
           <span className="text-white">SEND IT</span>
         </button>
       </div>

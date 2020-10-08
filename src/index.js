@@ -5,11 +5,20 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 // redux
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import rootReducer from './redux/reducers/_root.reducer';
+import createSagaMiddleware from 'redux-saga';
+import logger from 'redux-logger';
 
-const store = createStore(rootReducer);
+import rootSaga from './redux/sagas/_root.saga';
+
+const sagaMiddleware = createSagaMiddleware();
+
+const store = createStore(rootReducer, applyMiddleware(sagaMiddleware, logger));
+
+// rootSaga holds all sagas if we need multiple
+sagaMiddleware.run(rootSaga);
 
 ReactDOM.render(
   <Provider store={store}>
