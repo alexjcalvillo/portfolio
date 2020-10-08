@@ -1,5 +1,5 @@
 import React from 'react';
-import Contact from '../../components/Contact/Contact';
+import ContactForm from '../../components/ContactForm/ContactForm';
 
 function About() {
   return (
@@ -40,7 +40,7 @@ function About() {
         anything creative and if you want to work together just reach out!
       </p>
       <br />
-      <Contact />
+      <ContactForm />
     </div>
   );
 }
