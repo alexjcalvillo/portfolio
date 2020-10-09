@@ -9,16 +9,16 @@ const Nav = (props) => {
       <nav className="text-3xl font-thin flex justify-between pt-1">
         <Link to="/">
           <span className="absolute h-12 w-12 -ml-1 border border-black px-1 transition duration-500 ease-in-out all hover: transform hover:rotate-90 cursor-pointer"></span>
-          <span className="transition-none ml-px">AC</span>
+          <span className="transition-none ml-px ">AC</span>
         </Link>
         <div>
-          <Link to="/" className="mr-3 hover:underline">
+          <Link to="/" className="mr-3 hover:underline text-gray-800">
             Home
           </Link>
-          <Link to="/work" className="mr-3 hover:underline">
+          <Link to="/work" className="mr-3 hover:underline text-gray-800">
             Work
           </Link>
-          <Link to="/about" className="hover:underline">
+          <Link to="/about" className="hover:underline text-gray-800">
             About
           </Link>
         </div>
