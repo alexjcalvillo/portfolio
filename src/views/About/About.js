@@ -40,7 +40,11 @@ function About() {
         anything creative and if you want to work together just reach out!
       </p>
       <br />
-      <ContactForm />
+      <div className="text-center mb-10">
+        <h3 className="text-2xl font-thin">Want to work together?</h3>
+        <p className="text-4xl font-hairline mb-4">Contact Me</p>
+        <ContactForm />
+      </div>
     </div>
   );
 }

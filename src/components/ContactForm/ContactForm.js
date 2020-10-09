@@ -16,14 +16,20 @@ const Contact = (props) => {
     });
   };
 
-  const submitEmail = () => {
+  const submitEmail = (e) => {
+    e.preventDefault();
+
     props.dispatch({ type: 'SEND_EMAIL', payload: email });
+    setEmail({
+      name: '',
+      email: '',
+      subject: '',
+      message: '',
+    });
   };
   console.log(email);
   return (
-    <div className="text-center mb-10">
-      <h3 className="text-2xl font-thin">Want to work together?</h3>
-      <p className="text-4xl font-hairline mb-4">Contact Me</p>
+    <form>
       <div className="flex flex-wrap justify-between lg:mx-auto lg:w-3/4">
         <div className="w-1/2 pr-2 relative">
           <div className="absolute inset-y-0 left-0 flex items-center pl-2">
@@ -39,6 +45,7 @@ const Contact = (props) => {
             placeholder="name"
             type="text"
             field={handleInput('name')}
+            value={email.name}
           />
         </div>
         <div className="w-1/2 pl-2 relative">
@@ -55,6 +62,7 @@ const Contact = (props) => {
             placeholder="email"
             type="text"
             field={handleInput('email')}
+            value={email.email}
           />
         </div>
         <div className="w-full relative">
@@ -71,13 +79,15 @@ const Contact = (props) => {
             placeholder="subject"
             type="text"
             field={handleInput('subject')}
+            value={email.subject}
           />
         </div>
         <div className="w-full">
           <textarea
             className="w-full h-56 my-2 py-3 px-4 rounded"
-            placeholder="Testing placeholder props"
+            placeholder="Let's talk..."
             onChange={handleInput('message')}
+            value={email.message}
           />
         </div>
         <button
@@ -87,7 +97,7 @@ const Contact = (props) => {
           <span className="text-white">SEND IT</span>
         </button>
       </div>
-    </div>
+    </form>
   );
 };
 
