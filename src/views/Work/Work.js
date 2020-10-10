@@ -4,6 +4,7 @@ import ProjectLink from '../../components/ProjectLink/ProjectLink';
 function Work() {
   return (
     <div className="container mx-auto px-4">
+      <span className="text-6xl font-hairline">My name is Alex. </span>
       <div className="border-b border-gray-500 p-12 font-hairline text-gray-700">
         <h1 className="text-4xl">A few samples of my most recent work.</h1>
       </div>

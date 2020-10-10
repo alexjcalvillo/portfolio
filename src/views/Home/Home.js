@@ -2,28 +2,71 @@ import React from 'react';
 
 function Home() {
   return (
-    <div>
-      <div className="grid grid-cols-3 pt-8 z-10">
-        <div className="overflow-hidden px-4 col-span-3 lg:col-span-1 lg:ml-10 z-20">
-          <img
-            className="object-cover rounded-full"
-            src="./images/alex1_c-min.png"
-            alt="headshot of myself, Alex"
-          />
+    <div className="container mx-4 mt-12 mb-40">
+      <div className="mt-40">
+        <h2 className="text-3xl font-hairline">
+          I specialize in Frontend Development:
+        </h2>
+        <div className="flex flex-col lg:flex-row items-center justify-between">
+          <div class="w-full lg:w-4/12 bg-gray-200 rounded-md shadow-md p-4 ">
+            <p className="text-2xl font-thin tracking-wider">Technologies:</p>
+            <ul>
+              <li className="text-xs border-transparent rounded-full bg-gray-700 py-2 text-gray-100 px-3 my-4 w-1/2 animate-pulse">
+                React
+              </li>
+              <li className="text-xs border-transparent rounded-full bg-gray-700 py-2 text-gray-100 px-3 my-4 w-1/2">
+                Redux/Redux-Saga
+              </li>
+              <li className="text-xs border-transparent rounded-full bg-gray-700 py-2 text-gray-100 px-3 my-4 w-1/2 animate-pulse">
+                JavaScript
+              </li>
+              <li className="text-xs border-transparent rounded-full bg-gray-700 py-2 text-gray-100 px-3 my-4 w-1/2">
+                HTML/CSS
+              </li>
+              <li className="text-xs border-transparent rounded-full bg-gray-700 py-2 text-gray-100 px-3 my-4 w-1/2"></li>
+              <li className="text-xs border-transparent rounded-full bg-gray-700 py-2 text-gray-100 px-3 my-4 w-1/2"></li>
+            </ul>
+          </div>
+          <div className="lg:w-4/12 bg-gray-200 rounded-md shadow-md p-4">
+            <p className="text-2xl font-thin tracking-wider">Skills</p>
+            <ul>
+              <li className="text-xs border-transparent rounded-full bg-gray-700 py-2 text-gray-100 px-3 my-4 w-1/2 animate-pulse">
+                React
+              </li>
+              <li className="text-xs border-transparent rounded-full bg-gray-700 py-2 text-gray-100 px-3 my-4 w-1/2">
+                Redux/Redux-Saga
+              </li>
+              <li className="text-xs border-transparent rounded-full bg-gray-700 py-2 text-gray-100 px-3 my-4 w-1/2 animate-pulse">
+                JavaScript
+              </li>
+              <li className="text-xs border-transparent rounded-full bg-gray-700 py-2 text-gray-100 px-3 my-4 w-1/2">
+                HTML/CSS
+              </li>
+              <li className="text-xs border-transparent rounded-full bg-gray-700 py-2 text-gray-100 px-3 my-4 w-1/2"></li>
+              <li className="text-xs border-transparent rounded-full bg-gray-700 py-2 text-gray-100 px-3 my-4 w-1/2"></li>
+            </ul>
+          </div>
+          <div class="lg:w-4/12 bg-gray-200 rounded-md shadow-md p-4">
+            <p className="text-2xl font-thin tracking-wider">Skills</p>
+            <span className="font-thin tracking-wide">Technology:</span>
+            <ul>
+              <li className="text-xs border-transparent rounded-full bg-gray-700 py-2 text-gray-100 px-3 my-4 w-1/2 animate-pulse">
+                React
+              </li>
+              <li className="text-xs border-transparent rounded-full bg-gray-700 py-2 text-gray-100 px-3 my-4 w-1/2">
+                Redux/Redux-Saga
+              </li>
+              <li className="text-xs border-transparent rounded-full bg-gray-700 py-2 text-gray-100 px-3 my-4 w-1/2 animate-pulse">
+                JavaScript
+              </li>
+              <li className="text-xs border-transparent rounded-full bg-gray-700 py-2 text-gray-100 px-3 my-4 w-1/2">
+                HTML/CSS
+              </li>
+              <li className="text-xs border-transparent rounded-full bg-gray-700 py-2 text-gray-100 px-3 my-4 w-1/2"></li>
+              <li className="text-xs border-transparent rounded-full bg-gray-700 py-2 text-gray-100 px-3 my-4 w-1/2"></li>
+            </ul>
+          </div>
         </div>
-        <div className="col-span-3 px-4 lg:col-span-2 z-20">
-          <p className="text-2xl pt-12 lg:text-6xl font-thin lg:-m-20 lg:pt-32 lg:w-11/12">
-            Hi, I'm Alex. I'm a Software Engineer because I love the art of{' '}
-            <span className="font-light">storytelling</span>. I see software
-            engineering as an ability to be creative, tell stories, and connect
-            people through those stories.
-          </p>
-        </div>
-        <div className="absolute inset-y-0 bottom-0 right-0 z-0 h-auto w-3/5 border rounded border-gray-500 mt-24 mr-48"></div>
-      </div>
-      <div className="mt-20 w-4/6 border rounded p-8 border-gray-500 bg-primary mb-20 ml-16">
-        More content goes here.
-        <p className="text-6xl font-thin">I love Crosby!</p>
       </div>
     </div>
   );
